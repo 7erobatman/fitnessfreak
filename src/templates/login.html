@@ -1,0 +1,67 @@
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOGIN</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<style>
+body{
+	background-color: #e5e4e2;
+}
+
+	button{
+	height: 30px;
+	width:150px;
+	clear:both;
+   border: none;
+   background: #e8491d;
+   color: #ffffff;
+   margin:10px;
+   padding: 2px 20px;
+}
+button{
+	margin:0  auto;
+          display:table;
+}
+
+.second {
+	margin-top: 10px;
+	background-color: black;
+	padding: 1%;
+}
+.second p{
+	text-align: center;
+	color: white;
+	margin:0;
+}
+.second img{
+	margin-left: 420px;
+	padding:0;
+	height: 100px;
+	width: auto;
+	margin-bottom: 0;
+	margin-top: 2px;
+}
+ .clearfix{
+	 clear:both;
+	 height: 100%;
+ }
+</style>
+<body>
+	<h1>login</h1>
+	<form method="POST">
+		{%csrf_token%}
+		{{form|crispy}}
+		<button type="submit">login</button>		
+	</form>
+	<div class="clearfix"></div>
+	<div class="clearfix"></div>
+	 <footer class="second">
+                 <img src="{%static 'img/footer.png' %}" alt="fitness freaks_logo"></br>
+                 <p>&copy;FitnessFreak, 2017</p>
+               </footer>
+</body>
+</html>

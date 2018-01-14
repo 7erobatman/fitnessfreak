@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway'); /*--- Nav Font --*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway'); /*--- Heading Font --*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height:100%;
+	width: 100%;
+	background: black;
+	color: #fff;
+}
+
+.side-nav
+{
+  height: 100%;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a{
+  padding: 10px 10px 20px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color:#ccc;
+  display: block;
+  transition: 0.3s; 
+}
+
+.side-nav a:hover{
+  color:lightseagreen;
+}
+
+.btn-close{
+  position: absolute;
+  top:0px;
+  right:15px;
+  margin-left: 50px;
+}
+
+
+  .container{
+  width: 100%;
+  margin-top: 0;
+  margin- left: 50px
+  overflow :auto;
+}
+
+ 
+header{
+  background: black;
+  color: #ffffff;
+  padding-top:5px;
+  padding-bottom: 25px;
+  min-height: 100px;
+  border-bottom: #ccff00 5px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+ul{ /*global*/
+  margin:0;
+  padding: 0;
+  list-style:none;
+}
+
+header  ul li {
+	margin-right: 20px;
+  float: right;
+  font-family:'Open Sans';
+   padding:0 20px 0px 20px;
+   display:block;
+   cursor: pointer;
+   position: relative;
+
+}
+
+header ul li a {
+	text-decoration: none;
+	color:white;
+}
+
+
+.go {
+	font-family:'Open Sans';
+	margin-top:30px ;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	margin-right: 0px; 
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	color: white;
+	float:right;
+	width:7px;
+	height: 40px;
+	line-height: 30px;
+	text-align: right;
+	font-weight: bold;
+	
+}
+
+header #branding{
+  float: left;
+}
+ 
+ header .current a{
+   color:#e8491d;
+   font-weight: bold;
+ }
+
+ header a:hover {
+   color:green;
+   font-weight: bold;
+ }
+header .go {
+	display: none;
+}
+header  li:hover .go {
+	display:block;
+}
+
+
+
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 200%;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	text-decoration: underline;
+}
+p {
+	font-family: 'Raleway', serif;
+	color: #dedec5;
+	font-size: 140%;
+	line-height: 180%;
+	text-align: justify;
+	font-weight: 300;
+}
+img{
+	text-align: center;
+	max-width: 100%;
+	width: auto;
+}
+
+.into {
+	height: 100%;
+	width: 100%;
+	margin:  auto;
+	/*background:url(img/first.jpg) no-repeat 50% 50%;*/
+	background-size: cover;
+	display: table;
+	top: 0;
+	position:relative;
+}
+.into img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.content{
+  max-width: 500px;
+  margin:auto;
+}
+
+h1{
+  font-family: 'playfair display';
+  font-weight: 700;
+  font-size: 300%;
+  color: #fff;
+  text-align: center;
+  padding:28% 20% 10% 10%;
+  text-shadow: 0px 0px 250px #000;
+}
+
+
+.inner{
+  max-width: 600px;
+  margin: auto;
+  font-size: 150%;
+}
+
+.into {
+	overflow:auto;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	display: table;
+}
+
+
+ .left-col{
+	 width:60%;
+	 text-align: center;
+	 margin:2% 0 4% 20%;
+ }
+
+ .sidebar img{
+	 border-radius: 50%;
+	 padding: 1%;
+	 float:left;
+	 width:26%;
+	 clear:auto;
+	 margin:2% 1% 1% 3%;
+ }
+.sidebar img:hover{
+	opacity: 0.6;
+}
+
+.name p{
+	float:left;
+	text-transform: uppercase;
+	margin:0 15% 0 7%;
+           font-weight: bold;
+           font-size: 20px;
+           font-family: 'Raleway';
+}
+
+ .one-third-port{
+	 width:29%;
+	 padding: 2%;
+	 float:left;
+	 text-align: center;
+ }
+
+ .one-thrid-port img {
+	text-align: center;
+	/*max-width: 100%;*/
+}
+
+ .one-third-port img:hover{
+	 opacity: 0.6;
+ }
+.wrapper button{
+	margin:0  auto;
+	display:table;
+}
+.button_1{
+	height: 40px;
+	width:200px;
+	clear:both;
+   border: none;
+   background: #e8491d;
+   color: #ffffff;
+   padding: 0px 20px;
+}
+ .contact p{
+	 text-align: center;
+	 color:#dedec5;
+	 letter-spacing: 5px;
+	 display: block;
+ }
+
+ .clearfix{
+	 clear:both;
+	 height: 2%;
+ }
+
+ .contact a {
+color:#dedec5;
+ }
+
+ .parallax{
+	 background: url("http://www.rakftz.com/Portals/17/xBlog/uploads/2016/4/3/FITNESS%20TIME.jpg ") repeat  fixed -100px 400px;
+   opacity: .6;
+ }
+.parallax-inner{
+	padding-top: 20%;
+}
+
+.social{
+	list-style: none;
+	text-align: center;
+}
+
+.social li{
+	display: inline;
+}
+
+.social i{
+	font-size: 270%;
+	margin:1% 5% 7% 4%;
+ color: #2c2c2c;
+}
+
+.social  i:hover{
+	color:#606060;
+}
+
+.second {
+	background-color: black;
+	padding: 2%;
+}
+.second p{
+	text-align: center;
+	color: white;
+	margin:0;
+}
+.second img{
+	margin-left: 420px;
+	padding:0;
+	height: 150px;
+	width: auto;
+	margin-bottom: 0;
+	margin-top: 2px;
+}
+
+@media(max-width: 750px)
+	 {
+	 	header #branding,header nav, header nav, header li , aside{
+                 width:100%;
+              text-align: right;
+  }
+	 .into{
+		 height: 100%;
+		 width: 100%;
+		 }
+	#menu-icon{
+		margin:26px 0 0 26px;
+	}
+	nav ul, nav:active ul{
+		padding: 0;
+		left:5px;
+		width: 30%;
+	}
+	.inner{
+		font-size: 100%;
+	}
+
+	.content h1{
+		font-size: 250%;
+	}
+
+	h2{
+		font-size: 150%;
+	}
+	.left-col{
+		width: 100%;
+		margin:auto;
+		padding: 0  ;
+	}
+	.sidebar{
+	 margin:auto;
+	 height: auto;
+	}
+	.name p{
+		font-size: 9px;
+	}
+	.contact p{
+		display: block;
+		font-size: 80%;
+		text-align: center;
+		font-weight: bold;
+	}
+	.parallax{
+		display: none;
+	}
+	.social{
+		font-size: 70%;
+	}
+	iframe{
+		margin:0;
+		width: 80%;
+	}
+	.second img{
+		width: 20%;
+		height: auto;
+		margin:auto;
+	}
+go {
+  font-family:'Open Sans';
+  margin:0;
+  color: white;
+  float: right;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+}
+.contact figure {
+	margin:auto;
+	height: 100%;
+	width: 100%;
+}
+header #branding img {
+	height: 100px;
+
+}
+
+}
+
+

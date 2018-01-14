@@ -1,0 +1,159 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8>
+    <meta name = "viewport" content="width=device-width">
+    <meta name = "description" content="Fitness Freaks">
+    <meta name = "keyword" content="Fitness">
+    <meta name = "author" content="kumar gourav">
+    <title>Fitness Freaks | Mentor</title>
+    <link rel="icon" href="{%static 'img/logo.jpg' %}"/>
+    <link rel="stylesheet" href="{%static 'css1/font-awesome.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel ="stylesheet" href="{%static 'css/mentor.css' %}"/>
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <script src="{%static 'js/wow.min.js' %}"></script>
+  <script>
+   wow = new WOW(
+                      {
+                      boxClass:     'wow',      
+                      animateClass: 'animated', 
+                      offset:       0,          
+                      mobile:       true,       
+                      live:         true       
+                    }
+                    )
+       new WOW().init();
+  </script>
+  </head>
+  <body>
+    <header>
+    <nav class="navbar">
+     <span class="open_slide">
+       <a href="#" onclick="openSlideMenu();">
+         <svg width="30"  height="30">
+           <path d="M0,5 30,5" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,14 30,14" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,23 30,23" stroke="#fff"
+           stroke-width="5"/>
+         </svg>
+       </a>
+     </span>
+     <div class="container" >
+        <div id="branding">
+      <img id="logo" src="{%static 'img/footer.png' %}" alt="FITNESS FREAKS"  height="150" />
+        </div>
+          <ul >
+          <li class="current"><a href="#">other stuff</a> 
+          <ul class="go">
+             <li  class="no"><a href="{% url 'bmi' %}">BMI</a></li>
+             <li class="current"><a href="{% url 'mentor' %}">mentor </a></li>
+          </ul>
+          </li>
+          <li><a href="http://www.mensfitness.com/weight-loss/burn-fat-fast/best-diets-2016-according-us-news-world-report" target="_blank">deit plan</a>
+          <ul class="go">
+             <li  ><a href="https://www.bodybuilding.com/store/top50.htm" target="_blank">supplement</a></li>
+             </ul>
+             </li>
+            <li ><a  href ="{% url 'blog' %}">Blogs</a> </li>
+            <li ><a href="{%url 'video' %}">videos</a>
+            <ul class="go">
+             <li  ><a href="{%url 'stretch' %}">Stretching</a></li>
+             <li ><a href="{%url 'workout' %}">workout</a></li>
+          </ul>
+          </li>
+            <li ><a href="{%url 'images' %}">images</a>
+            <ul class="go">
+             <li  ><a href="{%url 'strpics' %}">Stretching</a></li>
+             <li ><a href="{%url 'exepics' %}">exercise</a></li>
+          </ul>
+          </li>
+            <li ><a href="{%url 'home' %}">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+  <div id="side-menu" class="side-nav">
+    <a class="btn-close" onclick="closeSlideMenu();">&times;</a>
+    <a href="{%url 'home' %}">Home</a>
+      <a href="{%url 'images' %}">images</a>
+     <a href="{%url 'video' %}">videos</a>
+      <a href="{%url 'home' %}">Contact </a>
+       <a href="{%url 'home' %}">About</a>
+       <a href="{% url 'logout' %}">Logout</a>
+
+  </div>
+      </header>
+      <section class="parallax">
+        <div class="parallax-inner"></div>
+      <div class="clearfix"></div>
+      
+       <section class="sidebar wow lightSpeedIn animated" >
+        <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&cad=rja&uact=8&ved=0ahUKEwj3-cuWtJfVAhULerwKHR3EABcQFghEMAc&url=https%3A%2F%2Fwww.facebook.com%2FBhupenderDhawanIndia%2Fabout&usg=AFQjCNGRy3op41EanpeV6ac5jpF91PfKkw" target="_blank"><img src="{%static 'img/bp.jpg' %}" alt="master"></a>
+    </section>
+     <section class="left-col">
+        <p>Mr.Dhawan, alumni of Hans Raj College, Delhi University were awarded the most coveted <q>Dronacharya</q> by his Excellency the President of India, Mr. K.R. Narayan in 2001.He also worked as General Secretary of All India Association of Dronacharya Awardees and General Secretary of Indian Gym Federation..</p>
+    </section>
+    <div class="clearfix"></div>
+     <section class="sidebar wow lightSpeedIn animated">
+       <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwi6ldXImJbVAhVBppQKHaQbDh4QFggtMAE&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArnold_Schwarzenegger&usg=AFQjCNFUe-ePWxsE6cw5HR7VUgo4zLVvdQ" target="_blank"><img src="{%static 'img/a.jpg' %}" alt="master"></a> 
+    </section>
+     <section class="left-col">
+        <p>Arnold Alois Schwarzenegger is an Austrian-American actor, producer, businessman, investor, author, philanthropist, activist, politician and former professional bodybuilder. He served two terms as the 38th Governor of California from 2003 to 2011.
+        </p>
+    </section>
+     <div class="clearfix"></div>
+     <section class="sidebar wow lightSpeedIn animated">
+      <a href="https://en.wikipedia.org/wiki/Kai_Greene" target="_blank" > <img src="{%static 'img/kai.jpg' %}" alt="master"></a>
+    </section>
+     <section class="left-col">
+        <p>
+Leslie Kai Greene (born July 12, 1975), known professionally as Kai Greene or Kai L. Greene, is an American IFBB professional bodybuilder, personal trainer, artist, and actor. His most recent victory was the 2016 Arnold Classic. He came in 2nd place at the 2012, 2013, and 2014 Mr. Olympia competitions.</p>
+    </section>
+     <div class="clearfix"></div>
+     <section class="bar wow lightSpeedIn animated" data-wow-delay="1s">
+       <a href="https://en.wikipedia.org/wiki/Mukesh_Singh_Gehlot" target="_blank"><img src="{%static 'img/mukesh.jpg' %}" alt="patner"></a>
+        <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=12&cad=rja&uact=8&sqi=2&ved=0ahUKEwjJ6_KKtpfVAhUCyrwKHfORDUsQFghYMAs&url=https%3A%2F%2Fwww.facebook.com%2Ftarungillfitnessexpert%2F&usg=AFQjCNETK8UyB2vitrp8mJ5KXfqydVtzrw" target="_blank"><img src="{%static 'img/tarun.jpg' %}" alt="master"></a>
+        <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwiVtO-ctpfVAhVFgrwKHRwOC88QFggjMAA&url=http%3A%2F%2Fwww.gurumann.com%2FHome.html&usg=AFQjCNFWf8mhixhSxSK63FwfHKbnj5oW2g" target="_blank"><img src="{%static 'img/guru.jpg' %}" alt="patner "></a>
+          <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjnjsaitZfVAhXEErwKHedJA3cQFgg2MAE&url=https%3A%2F%2Fwww.facebook.com%2FLazarAngelovFitness%2F&usg=AFQjCNEBEZZ0vuCdpS9pTOL00ZsvsXn1vg" target="_blank"><img src="{%static 'img/lazar.jpeg' %}" alt="patner "></a>
+            <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwjR8YK2tZfVAhUCf7wKHT0KBe8QFggjMAA&url=https%3A%2F%2Fjeffseid.com%2F&usg=AFQjCNEdYNNTfIts9G03YOCpmyRsIWjEvA" target="_blank"><img src="{%static 'img/jeff.jpg' %}" alt="patner "></a>
+            
+              <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=9&cad=rja&uact=8&sqi=2&ved=0ahUKEwjx583CtZfVAhVJybwKHabjDGEQFghFMAg&url=https%3A%2F%2Fwww.instagram.com%2Ftomocoleman%2F%3Fhl%3Den&usg=AFQjCNEp46tVIO4DE1PAwTik8XGqWILCdA" target="_blank"><img src="{%static 'img/tomc.jpg' %}" alt="patner "></a>
+                <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwjnsJTTtZfVAhVFErwKHY_6CU4QFggjMAA&url=https%3A%2F%2Fwww.instagram.com%2Fsergiconstance%2F%3Fhl%3Den&usg=AFQjCNHMZ1HvCxQQV3bvHVcL15naulQALA" target="_blank"><img src="{%static 'img/serjpg.jpg' %}" alt="patner "></a>
+                <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&sqi=2&ved=0ahUKEwip0dH0tZfVAhXExbwKHQ8uCgcQFggpMAE&url=https%3A%2F%2Fwww.jacodebruyn.com%2F&usg=AFQjCNEOzNICWs0hnet11-x-9Cq7vk_NoA" target="_blank"><img src="{%static 'img/jaco.jpg' %}" alt="patner "></a>
+                <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwjGtJ7qtZfVAhVFWbwKHTQfB-8QFggjMAA&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThakur_Anoop_Singh&usg=AFQjCNEoV2RWED-By_rK9bys3xMwjX8_CA" target="_blank"><img src="{%static 'img/an.jpg' %}" alt="patner "></a>
+                  <a href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjzvayBtpfVAhWGzLwKHdn4CfAQFggjMAA&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSahil_Khan&usg=AFQjCNGMFl1afIEoMaR4kC6t7PkmUMXF5w" target="_blank"><img src="{%static 'img/s.jpg' %}" alt="patner "></a>
+
+    </section>
+    <div class="clearfix"></div>
+      <section id ="newsletter">
+      <div class ="container">
+        <h1>Subscribe To  Our Newsletter</h1>
+        <form action="" method="POST">{% csrf_token %}
+          <input type="email" placeholder="Enter Email.."/>
+          <button type="submit" class="button_1 "> Subscribe</button>
+        </form>
+      </div>
+    </section>
+    </section>
+      <footer class="second">
+        <p>&copy;FitnessFreak, 2017</p>
+      </footer>
+            <script type="text/javascript">
+    function openSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="250px";
+      document.getElementById("main").style.marginLeft="250px";
+    }
+    function closeSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="0";
+      document.getElementById("main").style.marginLeft="0";
+    }
+  </script>
+      </body>
+      </html>
+

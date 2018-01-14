@@ -1,0 +1,165 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8>
+    <meta name = "viewport" content="width=device-width">
+    <meta name = "description" content="Fitness Freaks">
+    <meta name = "keyword" content="Fitness">
+    <meta name = "author" content="kumar gourav">
+    <title>Fitness Freaks | images</title>
+    <link rel="icon" href="{%static 'img/logo.jpg' %}"/>
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel ="stylesheet" href="{%static 'css/pic.css' %}"/>
+     <script src="{%static 'js/wow.min.js'%}"></script>
+  <script>
+   wow = new WOW(
+                      {
+                      boxClass:     'wow',      
+                      animateClass: 'animated', 
+                      offset:       0,          
+                      mobile:       true,       
+                      live:         true       
+                    }
+                    )
+       new WOW().init();
+  </script>
+
+  </head>
+  <body>
+    <header>
+    <nav class="navbar">
+     <span class="open_slide">
+       <a href="#" onclick="openSlideMenu();">
+         <svg width="30"  height="30">
+           <path d="M0,5 30,5" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,14 30,14" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,23 30,23" stroke="#fff"
+           stroke-width="5"/>
+         </svg>
+       </a>
+     </span>
+     <div class="container" >
+        <div id="branding">
+      <img id="logo" src="{% static 'img/footer.png' %}" alt="FITNESS FREAKS"  height="150" />
+        </div>
+          <ul >
+          <li ><a href="#">other stuff</a> 
+          <ul class="go">
+             <li  ><a href="{% url 'bmi' %}">BMI</a></li>
+             <li><a href="{% url 'mentor' %}">mentor </a></li>
+          </ul>
+          </li>
+           <li><a href="http://www.mensfitness.com/weight-loss/burn-fat-fast/best-diets-2016-according-us-news-world-report" target="_blank">deit plan</a>
+          <ul class="go">
+             <li  ><a href="https://www.bodybuilding.com/store/top50.htm" target="_blank">supplements</a></li>
+             </ul>
+             </li>
+            <li ><a  href ="{% url 'blog' %}">Blogs</a> </li>
+            <li ><a href="{% url 'video' %}">videos</a>
+            <ul class="go">
+             <li  ><a href="{% url 'stretch' %}">Stretching</a></li>
+             <li ><a href="{% url 'workout' %}">workout</a></li>
+          </ul>
+          </li>
+            <li class="current"><a href="{% url 'images' %}">images</a>
+            <ul class="go">
+             <li class="no"  ><a href="{% url 'strpics' %}">Stretching</a></li>
+             <li class="no"><a href="{% url 'exepics' %}">exercise</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'home' %}">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+  <div id="side-menu" class="side-nav">
+    <a class="btn-close" onclick="closeSlideMenu();">&times;</a>
+    <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'images' %}">images</a>
+     <a href="{% url 'video' %}">videos</a>
+      <a href="{% url 'home' %}">Contact </a>
+       <a href="{% url 'home' %}">About</a>
+       <a href="{% url 'logout' %}">Logout</a>
+  </div>
+      </header>
+      <section class="parallax">
+        <div class="parallax-inner"></div>
+      <div class="clearfix"></div>
+      <section class="left-col ">
+      <h2 class="rubberBand animated"style="text-transform: uppercase;">Fitspiration</h2>
+      <div class="wow fadeInRight animated ">
+       <section class="one-third-port">
+         <a href="http://healthmindpower.com/wp-content/uploads/2014/12/life-advice-from-arnold-schwarzenegger-800x350.jpg" target="_blank"><img src="{% static "img/arnold.jpg" %}" alt="couple" height=600px width=600px ></a>
+      </section>
+      <section class="one-third-port">
+          <a href="https://scontent.fdel9-1.fna.fbcdn.net/v/t1.0-9/19113722_1295266530578775_673175145227190336_n.jpg?oh=e4fbd11230c216f80900fa9158c7d5ae&oe=5A0F4803" target="_blank"><img src="{% static "img/jeff_seid-20170615-0001.jpg" %}" alt="couple"></a>
+    </section>
+     <section class="one-third-port">
+           <a href="https://4.bp.blogspot.com/-5tIxQys5jwA/VGHY1PXxk7I/AAAAAAAAAU0/VQCx9FyWM3w/s1600/Jaco.jpg" target="_blank"><img src="{% static "img/artemusdolgin-20170614-0001.jpg" %}" alt="couple"></a>
+      </section>
+      <section class="one-third-port">
+            <a href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13741185_315816388766259_299299380_n.jpg?ig_cache_key=MTMxMjA3MTA1OTY5MTk5Mzg1Mw%3D%3D.2" target="_blank"><img src="{% static "img/thakur_anoopsingh-20170710-0003.jpg" %}" alt="couple"></a>
+       </section>
+       <section class="one-third-port">
+             <a href="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e15/11232602_773776789403802_1969128136_n.jpg?ig_cache_key=OTgxNzIzOTE4MDYzMzk5NjYz.2" target="_blank"><img src="{% static "img/sergiconstance-20170710-0004.jpg" %}" alt="couple"></a>
+        </section>
+        <section class="one-third-port">
+              <a href="https://s-media-cache-ak0.pinimg.com/originals/1f/f1/21/1ff121f11b3131cf57f21292e16ef77d.jpg" target="_blank"><img src="{% static "img/tom.jpg" %}" alt="couple"></a>
+       </section>
+             <div class="clearfix"></div>
+        <section class="one-third-port">
+         <a href="http://healthmindpower.com/wp-content/uploads/2014/12/life-advice-from-arnold-schwarzenegger-800x350.jpg" target="_blank"><img src="{% static "img/arnold.jpg" %}" alt="couple" height=600px width=600px ></a>
+      </section>
+      <section class="one-third-port">
+          <a href="https://scontent.fdel9-1.fna.fbcdn.net/v/t1.0-9/19113722_1295266530578775_673175145227190336_n.jpg?oh=e4fbd11230c216f80900fa9158c7d5ae&oe=5A0F4803" target="_blank"><img src="{% static "img/jeff_seid-20170615-0001.jpg" %}" alt="couple"></a>
+    </section>
+     <section class="one-third-port">
+           <a href="https://4.bp.blogspot.com/-5tIxQys5jwA/VGHY1PXxk7I/AAAAAAAAAU0/VQCx9FyWM3w/s1600/Jaco.jpg" target="_blank"><img src="{% static "img/artemusdolgin-20170614-0001.jpg" %}" alt="couple"></a>
+      </section>
+      <section class="one-third-port">
+            <a href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13741185_315816388766259_299299380_n.jpg?ig_cache_key=MTMxMjA3MTA1OTY5MTk5Mzg1Mw%3D%3D.2" target="_blank"><img src="{% static "img/thakur_anoopsingh-20170710-0003.jpg" %}" alt="couple"></a>
+       </section>
+       <section class="one-third-port">
+             <a href="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e15/11232602_773776789403802_1969128136_n.jpg?ig_cache_key=OTgxNzIzOTE4MDYzMzk5NjYz.2" target="_blank"><img src="{% static "img/sergiconstance-20170710-0004.jpg" %}" alt="couple"></a>
+        </section>
+        <section class="one-third-port">
+              <a href="https://s-media-cache-ak0.pinimg.com/originals/1f/f1/21/1ff121f11b3131cf57f21292e16ef77d.jpg" target="_blank"><img src="{% static "img/tom.jpg" %}" alt="couple"></a>
+       </section>
+       </div>
+               <div class="wrapper">
+               <a href="https://www.google.co.in/search?q=bodybuilding+portfolio&rlz=1C1CHBF_enIN710IN710&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwjZwv6j-I_VAhWHo5QKHRaWDnwQsAQIJg&biw=1517&bih=720" target="_blank"><h3>for more images... </h3></a>
+             </div>
+          <div class="clearfix"></div>
+          </section>
+        <section id ="newsletter">
+      <div class ="container">
+        <h1>Subscribe To  Our Newsletter</h1>
+               <form action="" method="POST">{% csrf_token %}
+                {{form}}
+          <!-- <input type="email" placeholder="Enter Email.."/> -->
+          <button type="submit" class="button_1 "> Subscribe</button>
+        </form>
+        </div>
+    </section>
+      <footer class="second">
+        <p>&copy;FitnessFreak, 2017</p>
+      </footer>
+            <script type="text/javascript">
+    function openSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="250px";
+      document.getElementById("main").style.marginLeft="250px";
+    }
+    function closeSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="0";
+      document.getElementById("main").style.marginLeft="0";
+    }
+  </script>
+      </body>
+      </html>

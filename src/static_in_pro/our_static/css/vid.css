@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway'); /*--- Nav Font --*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway'); /*--- Heading Font --*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html, body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+  width: 100%;
+  background: #fff;
+}
+
+.side-nav
+{
+  height: 100%;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: #111;
+  opacity: 0.8;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a{
+  padding: 10px 10px 20px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color:#fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover{
+  color:lightseagreen;
+}
+
+.btn-close{
+  position: absolute;
+  top:0px;
+  right:15px;
+  margin-left: 50px;
+}
+
+#main{
+  margin-left:20px;
+  overflow: hidden;
+  width: 100%;
+}
+ .container{
+  width: 100%;
+  margin-top: 0;
+  overflow :hidden;
+}
+
+ #logo{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 100px;
+}
+.dark{
+  padding:5px 15px;
+  background: #35424a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color:#ffffff;
+}
+ 
+header{
+  background: black;
+  color: #ffffff;
+  padding-top:10px;
+  min-height: 70px;
+  border-bottom: #ccff00 5px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration: none;
+  text-transform: uppercase;;
+  font-size: 18px;
+}
+
+ul{ /*global*/
+  float:right;
+  margin: 0 ;
+  padding: 0;
+}
+
+header  ul li {
+  margin-right: 20px;
+  float: right;
+  font-family:'Open Sans';
+   padding:10px 10px 20px 20px;
+   display:block;
+   cursor: pointer;
+   position: relative;
+
+}
+
+header ul li a {
+  text-decoration: none;
+  color:white;
+}
+
+
+.go {
+  font-family:'Open Sans';
+  margin-top:30px ;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 0px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  color: white;
+  float:right;
+  width:7px;
+  height: 40px;
+  line-height: 20px;
+  text-align: right;
+  font-weight: bold;
+  
+}
+
+header #branding{
+  float: left;
+}
+ 
+ header .current a{
+   color:#e8491d;
+   font-weight: bold;
+ }
+header .no a{
+  color:#fff;
+ }
+ header a:hover {
+   color:green;
+   font-weight: bold;
+ }
+header .go {
+  display: none;
+}
+header  li:hover .go {
+  display:block;
+}
+
+ 
+.left-col h2{ 
+    text-shadow: 2px 2px 8px #948b39;
+  color: #ccff00;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 46px;
+  text-decoration: underline;
+  margin-left: 30px;
+}
+.one-third-port img {
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+.parallax{
+  background: url("https://wallpapershome.com/images/pages/pic_hs/9681.jpg") repeat ;
+  opacity: .7;
+  position: relative;
+}
+.parallax-inner{
+ padding-top: 2%;
+}
+ .one-third-port{
+	 width:29%;
+	 padding: 2%;
+	 float:left;
+	 text-align: center;
+ }
+
+ .one-third-port img:hover{
+	 opacity: 0.6;
+ }
+.wrapper h2{
+	margin:0  auto;
+	display:table;
+  	height: 40px;
+  	width:200px;
+  	float: right;
+     border: none;
+     background: black;
+     color: #a4cd41;
+     padding: 0px 20px;
+}
+ button{
+	margin:0  auto;
+	display:table;
+}
+.button_1{
+	height: 40px;
+	width:auto;
+	clear:both;
+   border: none;
+   background: black;
+   color: #a4cd41;
+   padding: 0px 20px;
+}
+
+ .clearfix{
+	 clear:both;
+	 height: 2%;
+ }
+
+ #newsletter {
+   padding: 15px;
+   color:#ffffff;
+   background: #35424a;
+ }
+ #newsletter h1{
+   float:left;
+ }
+ #newsletter form{
+   margin-top: 20px;
+   float: right;
+ }
+ #newsletter input[type="email"]{
+   padding:4px;
+   height: 25px;
+   width: 250px;
+ }
+
+ @media(max-width: 768px)
+{
+  header #branding,header nav, header nav, header li ,#newsletter  h1,#newsletter  form,#boxes .box, #main-col, aside{
+    float: none;
+    text-align: center;
+    width:100%;
+  }
+  header{
+    padding-bottom: 20px;
+  }
+  #showcase{
+    margin-top: 40px;
+  }
+
+  iframe{
+    margin:0;
+    height: auto;
+    width:100%;
+    position: relative;
+  }
+.go {
+  font-family:'Open Sans';
+  margin:0;
+  margin-right: 15%;
+  color: white;
+  float: right;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+}
+.parallax{
+  background: url("https://wallpapershome.com/images/pages/pic_hs/9681.jpg") repeat  ;
+  width: 100%;
+  opacity: .7;
+  position: relative;
+}
+}

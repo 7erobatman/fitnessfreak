@@ -1,0 +1,188 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8>
+  <meta name = "viewport" content="width=device-width">
+    <meta name = "description" content="Fitness Freaks">
+    <meta name = "keyword" content="Fitness">
+    <meta name = "author" content="kumar gourav">
+    <title>Fitness Freaks | video</title>
+    <link rel="icon" href="{% static "img/logo.jpg" %}"/>
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/animate.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel ="stylesheet" href="{% static "css/exvid.css" %}"/>
+     <script src="{% static "js/wow.min.js" %}"></script>
+  <script>
+  <script>
+   wow = new WOW(
+                      {
+                      boxClass:     'wow',      
+                      animateClass: 'animated', 
+                      offset:       0,          
+                      mobile:       true,       
+                      live:         true       
+                    }
+                    )
+       new WOW().init();
+  </script>
+  </head>
+  <body>
+   <header>
+<nav class="navbar">
+     <span class="open_slide">
+       <a href="#" onclick="openSlideMenu();">
+         <svg width="30"  height="30">
+           <path d="M0,5 30,5" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,14 30,14" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,23 30,23" stroke="#fff"
+           stroke-width="5"/>
+         </svg>
+       </a>
+     </span>
+     <div class="container" >
+        <div id="branding">
+      <img id="logo" src="{% static "img/footer.png" %}" alt="FITNESS FREAKS"  height="150" />
+        </div>
+          <ul >
+          <li ><a href="#">other stuff</a> 
+          <ul class="go">
+             <li  ><a href="{% url 'bmi' %}">BMI</a></li>
+             <li><a href="{% url 'mentor' %}">mentor </a></li>
+          </ul>
+          </li>
+          <li><a href="http://www.mensfitness.com/weight-loss/burn-fat-fast/best-diets-2016-according-us-news-world-report" target="_blank">deit plan</a>
+          <ul class="go">
+             <li  ><a href="https://www.bodybuilding.com/store/top50.htm" target="_blank">supplements</a></li>
+             </ul>
+             </li>
+            <li ><a  href ="{% url 'blog' %}">Blogs</a> </li>
+            <li class="current"><a href="{% url 'video' %}">videos</a>
+            <ul class="go">
+             <li  class="current"><a href="{% url 'stretch' %}">Stretching</a></li>
+             <li class="no"><a href="{% url 'workout' %}">workout</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'images' %}">images</a>
+            <ul class="go">
+             <li  ><a href="{% url 'strpics' %}">Stretching</a></li>
+             <li ><a href="{% url 'exepics' %}">exercise</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'home' %}">Home</a></li>
+          </ul>
+        </nav>
+      </div>    
+        </header>
+  <div id="side-menu" class="side-nav">
+    <a class="btn-close" onclick="closeSlideMenu();">&times;</a>
+    <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'images' %}">images</a>
+     <a href="{% url 'video' %}">videos</a>
+      <a href="{% url 'home' %}">Contact </a>
+       <a href="{% url 'home' %}">About</a>
+        <a href="{% url 'logout' %}">Logout</a>
+  </div>
+      <section class="parallax">
+        <div class="parallax-inner"></div>
+      <div class="clearfix"></div>
+      <section class="left-col wow shake animated">
+        <h2>Workout videos</h2>
+      </section>
+      <section class="one-third-port">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/5DFAcAvT2mI"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+        </iframe>
+     </section>
+     <section class="one-third-port">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/JBKej6n_A9I"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+          </iframe>
+   </section>
+    <section class="one-third-port">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/5FuQyB4Br9Y"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+            </iframe>
+     </section>
+     <section class="one-third-port">
+           <iframe width="420" height="315" src="https://www.youtube.com/embed/6oc4e1mxY7I"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+           </iframe>
+      </section>
+      <section class="one-third-port">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/QyfaYC6Gg6w"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+            </iframe>
+       </section>
+       <section class="one-third-port">
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/Xvddna84BXo"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+              </iframe>
+      </section>
+           
+        <section class="one-third-port">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/-X_QLUwR5DA"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+          </iframe>
+       </section>
+       <section class="one-third-port">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/Zb-K7YAzAZM"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+            </iframe>
+     </section>
+      <section class="one-third-port">
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/yBI8lrWKr4g"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+              </iframe>
+       </section>
+       <section class="one-third-port">
+             <iframe width="420" height="315" src="https://www.youtube.com/embed/69npmZI4e3c"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+             </iframe>
+        </section>
+        <section class="one-third-port">
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/efdjq7g9AUQ"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+              </iframe>
+         </section>
+         <section class="one-third-port">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/WBCQuW2yWZ0"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+                </iframe>
+        </section>
+        <section class="one-third-port">
+             <iframe width="420" height="315" src="https://www.youtube.com/embed/ilF_iVyukNI"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+             </iframe>
+        </section>
+        <section class="one-third-port">
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/hLaJNv1bins"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+              </iframe>
+         </section>
+         <section class="one-third-port">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/QSmAp5rcUdU"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+                </iframe>
+        </section>
+          <div class="wrapper">
+               <a href="https://www.youtube.com/watch?v=L3jq62nkbzQ&list=PLPEuMohpXw6eo7woAU5gpA1h72FJMlmWT" target="_blank"><h2>for abs videos... </h2></a>
+             </div>
+               
+          <div class="clearfix"></div>
+        <section id ="newsletter">
+      <div class ="container">
+        <h1>Subscribe To  Our Newsletter</h1>
+       <form action="" method="POST">{% csrf_token %}
+                {{form}}
+          <!-- <input type="email" placeholder="Enter Email.."/> -->
+          <button type="submit" class="button_1 "> Subscribe</button>
+        </form>
+      </div>
+    </section>
+     </section>
+      <footer class="second">
+        <p>&copy;FitnessFreak, 2017</p>
+      </footer>
+       <script type="text/javascript">
+    function openSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="250px";
+      document.getElementById("main").style.marginLeft="250px";
+    }
+    function closeSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="0";
+      document.getElementById("main").style.marginLeft="0";
+    }
+  </script>
+  </body>
+  </html>

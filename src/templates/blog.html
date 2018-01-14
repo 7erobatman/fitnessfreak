@@ -1,0 +1,222 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8>
+    <meta name = "viewport" content="width=device-width">
+    <meta name = "description" content="Fitness Freaks">
+    <meta name = "keyword" content="Fitness">
+    <meta name = "author" content="kumar gourav">
+    <title>Fitness Freaks | blogs</title>
+    <link rel="icon" href="img/logo.jpg"/>
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel ="stylesheet" href="{%static 'css/blog.css' %}"/>
+    <script src="{%static 'js/wow.min.js' %}"></script>
+  <script>
+   wow = new WOW(
+                      {
+                      boxClass:     'wow',      
+                      animateClass: 'animated', 
+                      offset:       0,          
+                      mobile:       true,       
+                      live:         true       
+                    }
+                    )
+       new WOW().init();
+  </script>
+  </head>
+  <body class="wow wobble animated">
+  <header>
+<nav class="navbar">
+     <span class="open_slide">
+       <a href="#" onclick="openSlideMenu();">
+         <svg width="30"  height="30">
+           <path d="M0,5 30,5" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,14 30,14" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,23 30,23" stroke="#fff"
+           stroke-width="5"/>
+         </svg>
+       </a>
+     </span>
+     <div class="container" >
+        <div id="branding">
+      <img id="logo" src="{%static 'img/footer.png' %}" alt="FITNESS FREAKS"  height="150" />
+        </div>
+        <ul >
+          <li ><a href="#">other stuff</a> 
+          <ul class="go">
+             <li  ><a href="{% url 'bmi' %}">BMI</a></li>
+             <li><a href="{% url 'mentor' %}">mentor </a></li>
+          </ul>
+          </li>
+          <li><a href="http://www.mensfitness.com/weight-loss/burn-fat-fast/best-diets-2016-according-us-news-world-report" target="_blank">deit plan</a>
+          <ul class="go">
+             <li  ><a href="https://www.bodybuilding.com/store/top50.htm" target="_blank">supplements</a></li>
+             </ul>
+             </li>
+            <li class="current"><a  href ="#">Blogs</a> </li>
+            <li ><a href="{% url 'video' %}">videos</a>
+            <ul class="go">
+             <li  ><a href="{% url 'stretch' %}">Stretching</a></li>
+             <li ><a href="{% url 'workout' %}">workout</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'images' %}">images</a>
+            <ul class="go">
+             <li  ><a href="{% url 'strpics' %}">Stretching</a></li>
+             <li ><a href="{% url 'exepics' %}">exercise</a></li>
+          </ul>
+          </li>
+            <li ><a href="{%url 'home' %}">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+            </header>
+  <div id="side-menu" class="side-nav">
+    <a class="btn-close" onclick="closeSlideMenu();">&times;</a>
+    <a href="{%url 'home' %}">Home</a>
+      <a href="{% url 'images' %}">images</a>
+     <a href="{% url 'video' %}">videos</a>
+      <a href="{%url 'home' %}">Contact </a>
+       <a href="{%url 'home' %}"s>About</a>
+        <a href="{% url 'logout' %}">Logout</a>
+  </div>
+      <section class="parallax">
+        <div class="parallax-inner"></div>
+      <section class="sidebar">
+      <h1>TRAINING ARTICLES</h1>
+      <article >
+        <header> 
+        <h2>The One Thing You Need To Do To Boost Your Big Lifts</h2> 
+        <p>article by:Bodybuliding.com</p>
+        </header>
+        <figure style="float: left;">
+        <img src="https://www.bodybuilding.com/images/2017/july/the-one-thing-you-need-to-do-to-boost-your-big-lifts-header-400x225.jpg"  height="200">
+        <figcaption><h6 style="margin:0;">training</h6></figcaption>
+      </figure>
+        <p>All it takes is a pencil, or a smartphone, to do this during your workout. But few lifters actually give it a second thought, 
+        and they wonder why they don't seem to be getting bigger and stronger. No more!
+      <q><a href="https://www.bodybuilding.com/content/the-one-thing-you-need-to-do-to-boost-your-big-lifts.html" target="_blank">to read more press it!</a></q></p>
+      </article>
+      </section>
+      <div class="clearfix"></div>
+      <section class="left1">
+      <article >
+        <header> 
+        <h2>Everything You Know About Cooling Down Is Wrong</h2> 
+        <p>article by:Bodybuliding.com</p>
+        </header>
+        <figure style="float: left;">
+        <img src="https://www.bodybuilding.com/images/2017/july/everything-you-know-about-cooling-down-is-wrong-header-v2-400x225.jpg"  height="200">
+        <figcaption><h6 style="margin:0;">training</h6></figcaption>
+      </figure>
+        <p>Forget everything you thought you knew about cooling down. Recent research indicates it's less about reducing muscle soreness and more about kicking off your recovery.
+      <q><a href="https://www.bodybuilding.com/content/everything-you-know-about-cooling-down-is-wrong.html" target="_blank">to read more press it!</a></q></p>
+      </article>
+      </section>
+      <section class="left2">
+      <article>
+        <header> 
+        <h2>Boost Your Calorie Burn By Using Mother Nature's Gym</h2> 
+        <p>article by:Bodybuliding.com</p>
+        </header>
+        <figure style="float: left;">
+        <img src="https://www.bodybuilding.com/images/2017/june/boost-your-calorie-burn-by-using-mother-natures-gym-header-v2-400x225.jpg"  height="200">
+        <figcaption><h6 style="margin:0;">training</h6></figcaption>
+      </figure>
+        <p>When the weather flips from grim to glorious, it's a natural inclination to take at least part of your workout outside. Turns out, it can help you get better results!
+      <q><a href="https://www.bodybuilding.com/content/boost-your-calorie-burn-by-using-mother-natures-gym.html" target="_blank">to read more press it!</a></q></p>
+      </article>
+      </section>
+      <div class="wrapper">
+               <form action="https://www.bodybuilding.com/category/training" target="_blank">
+               <button type="submit" class="button_1"><strong>Load more</strong></button>
+               </form>
+             </div>
+          <div class="clearfix"></div>
+
+
+          <section class="sidebar">
+      <h1>NUTRITION ARTICLES</h1>
+      <article >
+        <header> 
+        <h2>How Six-Pack Nutrition Is A Different Beast Than Fitness Nutrition</h2> 
+        <p>article by:Bodybuliding.com</p>
+        </header>
+        <figure style="float: left;">
+        <img src="https://www.bodybuilding.com/images/2017/june/how-six-pack-nutrition-is-a-different-beast-than-fitness-nutrition-header-v2-CELLUCOR-400x225.jpg"  height="200">
+        <figcaption><h6 style="margin:0;">training</h6></figcaption>
+      </figure>
+        <p>Yes, you can live the fit life and have room for serious indulgence. But when shredded six-pack abs are in your sight, the game changes. Here's the approach you need.
+      <q><a href="https://www.bodybuilding.com/fun/how-six-pack-nutrition-is-a-different-beast-than-fitness-nutrition.html" target="_blank">to read more press it!</a></q></p>
+      </article>
+      </section>
+      <div class="clearfix"></div>
+      <section class="left1">
+      <article >
+        <header> 
+        <h2>Weight Loss: Insider Secrets To Staying Fuller, Longer</h2> 
+        <p>article by:Bodybuliding.com</p>
+        </header>
+        <figure style="float: left;">
+        <img src="https://www.bodybuilding.com/images/2017/may/weight-loss-insider-secrets-to-staying-fuller-longer-header-v2-400x225.jpg"  height="200">
+        <figcaption><h6 style="margin:0;">training</h6></figcaption>
+      </figure>
+        <p>Quick, what makes you feel fuller for longer: French fries or popcorn? Find out what foods will fill you up without filling you out!
+      <q><a href="https://www.bodybuilding.com/content/weight-loss-insider-secrets-to-staying-fuller-longer.html" target="_blank">to read more press it!</a></q></p>
+      </article>
+      </section>
+      <section class="left2">
+      <article>
+        <header> 
+        <h2>How Useful Is The Glycemic Index As A Diet Guide?</h2> 
+        <p>article by:Bodybuliding.com</p>
+        </header>
+        <figure style="float: left;">
+        <img src="https://www.bodybuilding.com/images/2017/march/how-useful-is-the-glycemic-index-as-a-diet-guide-header-v2-400x225.jpg"  height="200">
+        <figcaption><h6 style="margin:0;">training</h6></figcaption>
+      </figure>
+        <p>Which helps you lose weight faster: Lucky Charms or Shredded Wheat? The glycemic index should tell you  but does it? Learn to look past "fast" versus "slow" carbohydrates when choosing foods for your diet.
+
+      <q><a href="https://www.bodybuilding.com/content/how-useful-is-the-glycemic-index-as-a-diet-guide.html" target="_blank">to read more press it!</a></q></p>
+      </article>
+      </section>
+      <div class="wrapper">
+               <form action="https://www.bodybuilding.com/category/nutrition" target="_blank">
+               <button type="submit" class="button_1"><strong>Load more</strong></button>
+               </form>
+             </div>
+          <div class="clearfix"></div>
+        <section id ="newsletter">
+      <div class ="container">
+        <h1>Subscribe To  Our Newsletter</h1>
+        <form action="" method="POST">{% csrf_token %}
+         {{form}}
+          <!-- <input type="email" placeholder="Enter Email.."/> -->
+          <button type="submit" class="button_1 "> Subscribe</button>
+        </form>
+      </div>
+    </section>
+      <footer class="second">
+        <p>&copy;FitnessFreak, 2017</p>
+      </footer>
+                <script type="text/javascript">
+    function openSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="250px";
+      document.getElementById("main").style.marginLeft="250px";
+    }
+    function closeSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="0";
+      document.getElementById("main").style.marginLeft="0";
+    }
+  </script>
+      </body>
+      </html>
+

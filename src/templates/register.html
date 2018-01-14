@@ -1,0 +1,103 @@
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<style>
+body{
+	background-color: #000;
+	margin:0;
+	padding: 0;
+}
+video{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 1;
+	  overflow :hidden;
+}
+
+form{
+	font-size: 16px;
+	margin-top:15px;
+	z-index: 2;
+	position: relative;
+	background: rgba(137,142,140,0.9);
+	border: none;
+
+}
+	button , a{
+	height: 30px;
+	width:150px;
+	clear:both;
+   border: none;
+   background: #e8491d;
+   color: #ffffff;
+   margin:10px;
+   padding: 2px 20px;
+}
+.aside {
+  float: right;
+  width: 40%;
+  margin: 2px;}
+
+  .container{
+  width: 100%;
+  margin: auto;
+ overflow: hidden;
+  }
+.second {
+	margin-top: 70px;
+	background-color: black;
+	padding: 1%;
+}
+.second p{
+	text-align: center;
+	color: white;
+	margin:0;
+}
+.second img{
+	margin-left: 420px;
+	padding:0;
+	height: 100px;
+	width: auto;
+	margin-bottom: 0;
+	margin-top: 2px;
+}
+.clearfix{
+	 clear:both;
+	 height: 100%;
+ }
+</style>
+<body>
+<div class="container">
+<video   muted  autoplay="true" loop >
+	<source src="{% static 'video/Jeff Seid - Work Hard Play Harder.mp4' %}">
+</video>
+<div class="aside">
+	<form method="post">{%csrf_token%}
+	<h2 >Registration form</h2>
+		{{form|crispy}}
+		{{ field.is_hidden }}
+		<button type ="submit">SUBMIT</button>
+	<a href="{%url 'login' %}">LOG IN</a>
+	</form>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="clearfix"></div>
+		 <footer class="second">
+                 <img src="{%static 'img/footer.png' %}" alt="fitness freaks_logo"></br>
+                 <p>&copy;FitnessFreak, 2017</p>
+               </footer>
+</body>
+</html>

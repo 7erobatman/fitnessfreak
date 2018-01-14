@@ -1,0 +1,254 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FitnessFreaks</title>
+  <meta name = "description" content="Fitness Freaks">
+  <meta name = "keyword" content="Fitness">
+  <meta name = "author" content="kumar gourav">
+<!-- <link rel="stylesheet"  type="text/css "href="css/style.css" > -->
+  <link rel="stylesheet"  type="text/css "href="{%static 'css/style.css' %}" >
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="{%static 'img/logo.jpg' %}">
+  <script src="https://use.fontawesome.com/1c57639878.js"></script>
+  <script src="{% static "js/wow.min.js" %}"></script>
+  <script>
+   wow = new WOW(
+                      {
+                      boxClass:     'wow',      
+                      animateClass: 'animated', 
+                      offset:       0,          
+                      mobile:       true,       
+                      live:         true       
+                    }
+                    )
+       new WOW().init();
+  </script>
+</head>
+<body>
+  <header>
+<nav class="navbar">
+     <span class="open_slide">
+       <a  onclick="openSlideMenu();">
+         <!-- svg element -->
+         <svg width="30"  height="30">
+           <path d="M0,5 30,5" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,14 30,14" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,23 30,23" stroke="#fff"
+           stroke-width="5"/>
+         </svg>
+       </a>
+     </span>
+     <div class="container wow fadeInDownBig animated"  >
+        <div id="branding">
+        <!-- <img src="{% static "my_app/myexample.jpg" %}" alt="My image"/> -->
+      <img src="{% static 'img/footer.png' %}" alt="FITNESS FREAKS"  height="150"  />   
+       </div>
+          <ul >
+          <li ><a href="#">other stuff</a> 
+          <ul class="go">
+             <li  ><a href="{% url 'bmi' %}">BMI</a></li>
+             <li><a href="{% url 'mentor' %}">mentor </a></li>
+          </ul>
+          </li>
+          <li><a href="http://www.mensfitness.com/weight-loss/burn-fat-fast/best-diets-2016-according-us-news-world-report" target="_blank">deit plan</a>
+          <ul class="go">
+             <li  ><a href="https://www.bodybuilding.com/store/top50.htm" target="_blank">supplements</a></li>
+             </ul>
+             </li>
+            <li ><a  href ="{%url 'blog' %}">Blogs</a> </li>
+            <li ><a href="{% url 'video' %}">videos</a>
+            <ul class="go">
+             <li  ><a href="{% url 'stretch' %}">Stretching</a></li>
+             <li ><a href="{% url 'workout' %}">workout</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'images' %}">images</a>
+            <ul class="go">
+             <li  ><a href="{% url 'strpics' %}">Stretching</a></li>
+             <li ><a href="{% url 'exepics' %}">exercise</a></li>
+          </ul>  
+          </li>
+            <li class="current"><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+
+  <div id="side-menu" class="side-nav"><!-- id is use for javascript work and class we put style with css-->
+    <a style="cursor: pointer;"  class="btn-close" onclick="closeSlideMenu();">&times;</a><!-- &times gives as an cross sign -->
+    <a href="#">Home</a>
+      <a href="#port">portfolio</a>
+     <a href="#serv">videos</a>
+      <a href="#art">articles and blogs</a>
+      <a href="#contact">Contact </a>
+       <a href="#about">About</a>
+       <a href="{% url 'logout' %}">Logout</a>
+
+
+  </div>
+  <section class="into">
+  <img class="mySlides" src="{%static 'img/first.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{%static 'img/1.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{%static 'img/Fitness-Wallpaper-5.jpg'%}" style="width:100%">
+   <img class="mySlides" src="{%static 'img/2.jpg'%}" style="width:100%">
+    <img class="mySlides" src="{%static 'img/arnold.jpg' %}" style="width:100%">
+     <img class="mySlides" src="{%static 'img/3.jpg' %}" style="width:100%">
+      <img class="mySlides" src="{%static 'img/4.jpg' %}" style="width:100%">
+  </section>
+   <a name="about">
+     <div class="clearfix"></div>
+     <section class="left-col">
+        <h2 >About us</h2>
+    </section>
+    <section class="sidebar">
+       <a href="https://www.facebook.com/rawat.pj" target="_blank"><img src="{%static 'img/pranjal.jpg' %}" alt="patner"></a>
+        <a href="https://www.facebook.com/kumar.gourav.1232" target="_blank"><img src="{%static 'img/g2.jpg' %}" alt="master"></a>
+        <a href="https://www.facebook.com/nitin2507" target="_blank"><img src="{%static 'img/nitin.jpg' %}" alt="patner "></a>
+    </section>
+        <div class="clearfix"></div>
+     <section class="name">
+         <p style="color:#ff6210">pranjal rawat</p>
+         <p>kumar gourav</p>
+        <p style="color:#08ac41">nitin yadav</p>
+        </section>
+         <div class="clearfix"></div>
+     <a name="port">
+       <h2>Portfolio</h2>
+       <section class="one-third-port">
+         <a href="https://pbs.twimg.com/media/DDT9R-cW0AA91yU.jpg" target="_blank"><img src="{%static 'img/jacod.jpg' %}"  width="535px" height="390px"  alt="couple" ></a>
+      </section>
+      <section class="one-third-port">
+          <a href="https://scontent.fdel9-1.fna.fbcdn.net/v/t1.0-9/19113722_1295266530578775_673175145227190336_n.jpg?oh=e4fbd11230c216f80900fa9158c7d5ae&oe=5A0F4803" target="_blank"><img src="{%static 'img/jeff_seid-20170615-0001.jpg' %}" alt="couple"></a>
+    </section>
+     <section class="one-third-port">
+           <a href="https://scontent.fdel9-1.fna.fbcdn.net/v/t1.0-9/12088417_933106130061617_3436496624437517760_n.jpg?oh=67f9ba0e7d858d8d049e9ab68cc6f482&oe=59CD6BCD" target="_blank"><img src="{%static 'img/thakur_anoopsingh-20170710-0002.jpg' %}" alt="couple"></a>
+      </section>
+      <section class="one-third-port">
+            <a href="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13741185_315816388766259_299299380_n.jpg?ig_cache_key=MTMxMjA3MTA1OTY5MTk5Mzg1Mw%3D%3D.2" target="_blank"><img src="{%static 'img/thakur_anoopsingh-20170710-0003.jpg' %}" alt="couple"></a>
+       </section>
+       <section class="one-third-port">
+             <a href="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e15/11232602_773776789403802_1969128136_n.jpg?ig_cache_key=OTgxNzIzOTE4MDYzMzk5NjYz.2" target="_blank"><img src="{%static 'img/sergiconstance-20170710-0004.jpg' %}" alt="couple"></a>
+        </section>
+        <section class="one-third-port">
+              <a href="https://s-media-cache-ak0.pinimg.com/originals/1f/f1/21/1ff121f11b3131cf57f21292e16ef77d.jpg" target="_blank"><img src="{%static 'img/tom.jpg' %}" alt="couple"></a>
+       </section>
+              <div class="wrapper">
+                <form action="pic.html">
+                <button type="submit" class="button_1"><strong>view more images</strong></button>
+                </form>
+              </div>
+         <div class="clearfix"></div>
+         <a name="serv">
+           <section class="left-col">
+             <h2>video</h2>
+             <iframe width="800" height="500" src="https://www.youtube.com/embed/EykWcFEtFqo"  allowfullscreen="allowfullscreen"   mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
+             </iframe>
+
+          /<!-- <section class="sidebar">
+             <section class="contact">
+               <p>Wedding Portraits <br >Engagements <br>Social Events <br>Artistic Modeling <br>School Photos<br> Family Portraits</p>
+             </section>
+           </section>-->
+             <div class="wrapper">
+               <form action="vid.html">
+               <button type="submit" class="button_1"><strong>Videos section</strong></button>
+               </form>
+             </div>
+             </section>
+             <div class="clearfix"></div>
+             <a name="art">
+            <section class="contact">
+              <h2>Article and Blog</h2>
+               <article>
+      <header>
+        <h2>How do I make my body look completely Awesome?</h2>
+        <p>Posted by: RomanfitnessSystem</p>
+      </header>
+      <p>That’s what you want: to be big without being “too big”; to have a physique that inspires your allies, strikes fear into the heart of your enemies, and creates sexual arousal so distracting it may lead to vehicular manslaughter.
+It can be done. The answer, my friends, is simpler than slaying a dragon, stopping the zombie apocalypse, or filming a shot-by-shot recreation of Ferris Bueller’s Day Off.
+(Trust me, I’ve done all three.)
+Now, it’s time to share my secrets with you. My goal is to build an army of perfectly symmetrical, unrealistically attractive zombie slayers—and I want you to be a part of it.
+And that starts now, with you downloading these two incredible guides, completely exclusive to members of the Roman Fitness Empire.
+Because they’re intended to help you look awesome, I have cleverly titled them How to Look Fucking Awesome and 30 Days to Awesome, respectively. And look awesome is what it’ll show you how to do.
+</p>
+      <figure style="float:left">
+        <img src="http://romanfitnesssystems.com/wp-content/uploads/2014/09/roman1.jpg" alt="Justin Beaver's cat is pleased">
+        <figcaption>roman</figcaption>
+      </figure>
+      <p style="clear:auto">The first guide covers everything you need to know about finding the right training methods to maximize your potential; the second guide is a complete 30-Day program specifically designed to build serious muscle while incinerating fat, giving you a massive head start on your road to a truly awesome body.
+      <q>Just enter your email below and I’ll send you my exact blueprints for crushing your enemies, seeing their fields driven before you, and hearing the lamentation of any who would oppose you.And then, we party.</q> - the fitness freaks.
+      </p>
+    </article>
+
+            </section>
+              <div class="wrapper">
+                <form action="blog.html">
+                <button type="submit" class="button_1"><strong>read more blogs</strong></button>
+                </form>
+              </div>
+              </section>
+              <div class="clearfix"></div>
+             <a name="contact">
+               <section class="parallax">
+                 <div class="parallax-inner"></div>
+               </section>
+               <div class="clearfix"></div>
+
+               <div class="clearfix"></div>
+               <h2>Contact us</h2>
+               <section class="contact">
+                 <p>TeamFreak &nbsp; <a href="mailto:freakers@fitnessworld.com">freakers@fitnessworld.com</a> &nbsp; 8447887683 </p>
+                 <p>1000 Street &nbsp; Road My City &nbsp; My State &nbsp;19000</p>
+               </section>
+               <div class="clearfix"></div>
+               <footer>
+                 <ul class="social">
+                   <li><a href="https://www.facebook.com/?stype=lo&jlou=AfcSCq_G6CGFpb9bLN9BxYMuULVObUWH44eirLraI6w-QsOjPJ_olrwN_F_5MMvtH9X3GJCOPNqAOlG_ECLcYh9DgerDvIFrnwS2bW2qtFu_Vg&smuh=2768&lh=Ac9DkuNrqswNDYLW" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="https://www.facebook.com/kumar.gourav.1232" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                   <li><a href="https://www.facebook.com/kumar.gourav.1232" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="https://www.facebook.com/kumar.gourav.1232" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                   <li><a href="https://www.facebook.com/kumar.gourav.1232" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                 </ul>
+               </footer>
+               <footer class="second">
+                 <img src="{%static 'img/footer.png' %}" alt="fitness freaks_logo"></br>
+                 <p>&copy;FitnessFreak, 2017</p>
+               </footer>
+    <script type="text/javascript">
+    var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+
+    function openSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="250px";
+      document.getElementById("main").style.marginLeft="250px";
+    }
+    function closeSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="0";
+      document.getElementById("main").style.marginLeft="0";
+    }
+  </script>
+</body>
+</html>

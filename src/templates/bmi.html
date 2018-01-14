@@ -1,0 +1,155 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8>
+    <meta name = "viewport" content="width=device-width">
+    <meta name = "description" content="Fitness Freaks">
+    <meta name = "keyword" content="Fitness">
+    <meta name = "author" content="kumar gourav">
+    <title>Fitness Freaks | BMI</title>
+    <link rel="icon" href="{%static 'img/logo.jpg' %}"/>
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel ="stylesheet" href="{%static 'css/bmi.css' %}"/>
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+  </head>
+  <body class="rollIn animated">
+  <header>
+<nav class="navbar">
+     <span class="open_slide">
+       <a href="#" onclick="openSlideMenu();">
+         <svg width="30"  height="30">
+           <path d="M0,5 30,5" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,14 30,14" stroke="#fff"
+           stroke-width="5"/>
+           <path d="M0,23 30,23" stroke="#fff"
+           stroke-width="5"/>
+         </svg>
+       </a>
+     </span>
+     <div class="container" >
+        <div id="branding">
+      <img id="logo" src="{%static 'img/footer.png' %}" alt="FITNESS FREAKS"  height="150" />
+        </div>
+        <ul >
+          <li class="current"><a href="#">other stuff</a> 
+          <ul class="go">
+             <li class="current"  ><a href="#">BMI</a></li>
+             <li class="no"><a href="{% url 'mentor' %}">mentor </a></li>
+          </ul>
+          </li>
+          <li><a href="http://www.mensfitness.com/weight-loss/burn-fat-fast/best-diets-2016-according-us-news-world-report" target="_blank">deit plan</a>
+          <ul class="go">
+             <li  ><a href="https://www.bodybuilding.com/store/top50.htm" target="_blank">supplements</a></li>
+             </ul>
+             </li>
+            <li><a  href ="{% url 'blog' %}">Blogs</a> </li>
+            <li ><a href="{% url 'video' %}">videos</a>
+            <ul class="go">
+             <li  ><a href="{% url 'stretch' %}">Stretching</a></li>
+             <li ><a href="{% url 'workout' %}">workout</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'images' %}">images</a>
+            <ul class="go">
+             <li  ><a href="{% url 'strpics' %}">Stretching</a></li>
+             <li ><a href="{% url 'exepics' %}">exercise</a></li>
+          </ul>
+          </li>
+            <li ><a href="{% url 'home' %}">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+            </header>
+  <div id="side-menu" class="side-nav">
+    <a class="btn-close" onclick="closeSlideMenu();">&times;</a>
+    <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'images' %}">images</a>
+     <a href="{% url 'video' %}">videos</a>
+      <a href="{% url 'home' %}">Contact </a>
+       <a href="{% url 'home' %}">About</a>
+        <a href="{% url 'logout' %}">Logout</a>
+  </div>
+      <section class="parallax">
+        <div class="parallax-inner"></div>
+      <div class="clearfix"></div>
+      <section>
+      <div class="bmi">
+        <form name="bmiform">
+          Your Weight(kg): <input type="text" name="weight" size="10"  style="width: 150px;" style="height: : 200px;" ><br/>
+           <br> Your Height(cm): <input type="text" name="height" size="10" style="width: 150px;" style="height: : 200px;"><br/>
+            <br><input type="button"  class="button_1" value="Calculate BMI" onclick="calculatebmi()" ><br/>
+            <br>Your BMI: <input type="text" name="bmi" size="10" style="width: 200px;" style="height: : 200px;"><br>
+            <br><label>This Means: </label><br><input type="text" name="meaning"  size"40" style="width: 350px;" style="height: : 300px;"><br>
+            <br><input type="reset" value="Reset" class="button_1">
+        </form>
+        </div>
+        </section>
+        <section class="sidebar">
+      <article >
+        <header> 
+        <h2>What is BMI?</h2> 
+        <p>article by:Medical news today</p>
+        </header>
+        <p>BMI is used as a screening tool to indicate whether a person is underweight, overweight, obese or a healthy weight for their height.
+             If a person's BMI is out of the healthy BMI range, their health risks may increase significantly.
+            BMI values are age-independent and the same for both sexes. However, BMI may not correspond to the same degree of fatness in different populations due to different body proportions.
+        </p>
+        <figure style="float: left;">
+        <img src="http://www.medicalnewstoday.com/images/articles/292/292304/bmi-for-men-and-women.png"  height="200">
+        <figcaption>BMI Chart</figcaption>
+      </figure>
+      <p><q>The health risks associated with an increasing BMI are continuous, and the interpretation of BMI grading in relation to risk may differ for different populations.</q></p>
+      </article>
+      </section>
+      <div class="clearfix"></div>
+<section id ="newsletter">
+      <div class ="container">
+        <h1>Subscribe To  Our Newsletter</h1>
+        <form action="" method="POST">{% csrf_token %}
+         {{form}}
+          <!-- <input type="email" placeholder="Enter Email.."/> -->
+          <button type="submit" class="button_1 "> Subscribe</button>
+        </form>
+      </div>
+    </section>
+      <footer class="second">
+        <p>&copy;FitnessFreak, 2017</p>
+      </footer>
+                <script type="text/javascript">
+    function openSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="250px";
+      document.getElementById("main").style.marginLeft="250px";
+    }
+    function closeSlideMenu()
+    {
+      document.getElementById("side-menu").style.width="0";
+      document.getElementById("main").style.marginLeft="0";
+    }
+    function calculatebmi(){
+      var weight= document.bmiform.weight.value;
+      var height= document.bmiform.height.value;
+      if (weight>0 && height>0){
+        var finalbmi = weight/(height/100*height/100);
+        document.bmiform.bmi.value = finalbmi;
+        if(finalbmi <18.5){
+          document.bmiform.meaning.value  = "That you are too thin";
+        }
+        if(finalbmi>18.5 &&  finalbmi<25) {
+          document.bmiform.meaning.value  = "That you are healthy";
+        }
+        if (finalbmi>25) {
+            document.bmiform.meaning.value  = "That you are overweight";
+        }
+    }
+    else{
+      alert("Please Fill in everthing correctly")
+    }
+  }
+  </script>
+      </body>
+      </html>
+
